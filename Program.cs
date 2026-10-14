@@ -1,19 +1,23 @@
 for (int item = 1; item <= 50; item++)
 {
+    string status;
+
     if (item % 3 == 0 && item % 5 == 0)
     {
-        Console.WriteLine($"Item [{item}]: Critical Alert");
+        status = "Critical Alert";
     }
     else if (item % 3 == 0)
     {
-        Console.WriteLine($"Item [{item}]: Restock");
+        status = "Restock";
     }
     else if (item % 5 == 0)
     {
-        Console.WriteLine($"Item [{item}]: Overstock");
+        status = "Overstock";
     }
     else
     {
-        Console.WriteLine($"Item [{item}]: OK");
+        status = "OK";
     }
+
+    Console.WriteLine($"Item [{item}]: {status}");
 }
